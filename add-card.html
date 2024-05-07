@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/uikit@3.19.4/dist/css/uikit.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.19.4/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.19.4/dist/js/uikit-icons.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="./css/styles.css" />
+    <script type="text/javascript" src="./js/script.js" defer></script>
+
+    <title>Add new card</title>
+  </head>
+  <body>
+    <div class="cc-main">
+      <div class="mob-header">
+        <a
+          class="mob-header-back"
+          href="#"
+          uk-icon="icon: chevron-left; ratio: 1.4"
+        ></a>
+        <h4 class="mob-header-title">Add a new card</h4>
+      </div>
+
+      <div class="cc-inputs">
+        <div class="card-inputs-top">
+          <div class="uk-first-column">
+            <div class="form-focus">
+              <label class="uk-form-label" for="bankCard">Card Number</label>
+              <div class="uk-form-controls">
+                <input
+                  name="bankCardInput"
+                  id="bankCard"
+                  class="uk-input input-prime-inset"
+                  type="text"
+                  maxlength="16"
+                />
+              </div>
+            </div>
+            <div class="text-danger jsCardMessage uk-hidden"></div>
+          </div>
+        </div>
+
+        <div class="card-inputs-bottom">
+          <div class="uk-first-column">
+            <div class="form-focus">
+              <label class="uk-form-label" for="cardExpiry"
+                >Expiry: MM / YY</label
+              >
+              <div class="uk-form-controls">
+                <input
+                  name="cardExpiryInput"
+                  id="cardExpiry"
+                  class="uk-input input-prime-inset"
+                  type="text"
+                  maxlength="5"
+                />
+              </div>
+            </div>
+            <div class="text-danger jsCardExpiryMessage uk-hidden"></div>
+          </div>
+          <div class="uk-first-column">
+            <div class="form-focus">
+              <label class="uk-form-label" for="cardCvv">CVV</label>
+              <div class="uk-form-controls">
+                <input
+                  name="cardCvvInput"
+                  id="cardCvv"
+                  class="uk-input input-prime-inset"
+                  type="password"
+                  maxlength="4"
+                />
+              </div>
+              <div
+                class="info-ico"
+                uk-tooltip="title: CVV is the last 3 digits on the back of your card; pos: bottom-right"
+              ></div>
+            </div>
+            <div class="text-danger jsCardCvvMessage uk-hidden"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="cc-btns">
+        <button class="pay-app-btn cr-btn" id="creditcardBtn">Save Card</button>
+      </div>
+    </div>
+  </body>
+</html>
